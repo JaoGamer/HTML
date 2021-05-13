@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="print.png" type="image/x-icon">
+    <link rel="shortcut icon" href="printp.png" type="image/x-icon">
     <title>Home</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
     <h2>Imagens</h2>
     <h3>Tag de imagem</h3>
     <p>usando a tag &lt;img&gt; pode mostrar uma imagem</p>
-    <img src="print.png" alt="roblox">
+    <img src="printp.png" alt="roblox">
     <h3>Favicon</h3>
     <p>usando link:favicon você consegue definir um favicon</p>
     <br>
@@ -107,5 +107,32 @@
     <h3>Âncora</h3>
     <p>Se quiser ir para o google.com <a href="https://google.com" target="_blank" rel="external">clique aqui</a></p>
     <p>Se quiser sair do site e ir para o google <a href="https://google.com">clique aqui</a></p>
+    <h3>Link para download</h3>
+    <ul>
+        <li><a href="livro/17.pdf" download="17.pdf" type="application/pdf">Clique aqui para baixar o pdf</a></li>
+        <li><a href="livro/17.rar" download="17.rar">Clique aqui para baixar o pdf em rar</a></li>
+        <li><a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external">útil</a></li>
+    </ul>
+    <h2>Imagens dinâmicas</h2>
+    <h3>Imagens que se adaptam sozinhas</h3>
+    <p>Inspecionar > Ctrl+shift+m para testar em vários dispositívos</p>
+    <picture>
+        <source media="(max-width: 500px)" srcset="imagens/PP.png" type="image/png">
+        <source media="(max-width: 750px)" srcset="imagens/P.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/M.png" type="image/png">
+        <img src="imagens/G.png" alt="printão">
+    </picture>
+    <h2>Reproduzindo áudio</h2>
+    <h3>Tag audio</h3>
+    <p>Abaixo você poderá ouvir uma música em meu site</p>
+    <audio src="audio/musicagenerica.mp3" controls></audio>
+    <h3>Outro método</h3>
+    <p>Música tocando no site</p>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="audio/musicagenerica.mp3" type="audio/mpeg">
+        <source src="audio/musicagenerica.ogg" type="audio/ogg">
+        <source src="audio/musicagenerica.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue carregar o arquivo de áudio <a href="audio/musicagenerica.mp3" download="audio/musicagenerica.mp3">Clique aqui para fazer o download do áudio</a></p> <!--Oque este código faz é, basicamente, tentar um, se falhar tenta outro, e assim se repete, no caso esse código seria útil se houvesse todos esses outros arquivos nesses outros formatos-->
+    </audio>
 </body>
 </html>
